@@ -14,22 +14,40 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const Home(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class Home extends StatefulWidget {
+  const Home({super.key});
 
-  final String title;
-
-  @override => _MyHomePageState();
+  @override
+  State<Home> createState() => _HomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+          body: Row(
+        children: [
+          Expanded(
+              child: Container(
+            color: Colors.red,
+          )),
+          Expanded(
+              flex: 5,
+              child: Container(
+                color: Colors.green,
+              )),
+          Expanded(
+              child: Container(
+            color: Colors.blue,
+          ))
+        ],
+      )),
+    );
   }
 }
