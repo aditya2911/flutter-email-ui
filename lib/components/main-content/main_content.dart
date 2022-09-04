@@ -1,3 +1,4 @@
+import 'package:email_ui/config/colors.dart';
 import 'package:flutter/material.dart';
 
 class MainContent extends StatelessWidget {
@@ -9,10 +10,25 @@ class MainContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: size.height,
-      width: size.width * .68,
-      color: Colors.green,
+    return Ink(
+      color: const Color(0xff1c7A74),
+      child: Ink(
+        decoration: BoxDecoration(
+            color: mediaplayerBackgroundColor,
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withOpacity(0),
+                  Colors.black.withOpacity(0.9),
+                  Colors.black.withOpacity(1),
+                  Colors.black.withOpacity(1),
+                  Colors.black.withOpacity(1),
+                  mediaplayerBackgroundColor
+                ])),
+        height: size.height,
+        width: size.width * .68,
+      ),
     );
   }
 }

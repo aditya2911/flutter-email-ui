@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: PixelPerfect(
         assetPath: "assets/Images/SS.PNG",
-        initOpacity: 0.4,
+        initOpacity: .2,
         scale: 1.25,
         child: Scaffold(
             body: Row(
