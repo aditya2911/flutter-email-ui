@@ -16,16 +16,14 @@ class SiderBarPlaylists extends StatelessWidget {
       child: FractionallySizedBox(
         heightFactor: 0.355,
         widthFactor: 0.86,
-        child: Container(
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              text,
-              maxLines: 1,
-              style: const TextStyle(
-                overflow: TextOverflow.ellipsis,
-                fontWeight: FontWeight.w200,
-              ),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            text,
+            maxLines: 1,
+            style: const TextStyle(
+              overflow: TextOverflow.ellipsis,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ),

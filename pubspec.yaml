@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   pixel_perfect: ^1.1.1
   flutter_svg: ^1.1.4
+  staggered_grid_view_flutter: ^0.0.4
+  flutter_layout_grid: ^2.0.1
+  flutter_screenutil: ^5.5.4
 
 dev_dependencies:
   flutter_test:

@@ -22,14 +22,15 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(color: iconColor),
         textTheme: TextTheme(
             bodyText1: TextStyle(
-              color: iconColor,
-              fontWeight: FontWeight.w700,
-              fontSize: 13.5,
-            ),
+                color: Colors.grey.shade300,
+                fontWeight: FontWeight.w700,
+                fontSize: 13.5,
+                letterSpacing: -0.2),
             bodyText2: TextStyle(
                 fontSize: 13.5,
                 color: Colors.grey.shade300,
-                fontWeight: FontWeight.w700)),
+                fontWeight: FontWeight.w700,
+                letterSpacing: -0.2)),
         primarySwatch: Colors.blue,
       ),
       home: const Home(),
@@ -48,7 +49,6 @@ class _HomeState extends State<Home> {
   late Size size;
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     size = MediaQuery.of(context).size;
   }
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: PixelPerfect(
         assetPath: "assets/Images/SS.PNG",
-        initOpacity: .2,
+        initOpacity: .3,
         scale: 1.25,
         child: Scaffold(
             body: Row(
