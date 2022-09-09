@@ -39,6 +39,8 @@ dependencies:
   staggered_grid_view_flutter: ^0.0.4
   flutter_layout_grid: ^2.0.1
   flutter_screenutil: ^5.5.4
+  audio_video_progress_bar: ^0.10.0
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:

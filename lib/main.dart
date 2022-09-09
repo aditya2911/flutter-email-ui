@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pixel_perfect/pixel_perfect.dart';
 
 import 'components/main-content/main_content.dart';
+import 'components/mediaplayer/mediaplayer.dart';
 import 'components/sidebar/sidebar.dart';
 import 'components/sign-in-sidebar/sign_in_siderbar.dart';
 import 'config/colors.dart';
@@ -58,14 +59,19 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: PixelPerfect(
         assetPath: "assets/Images/SS.PNG",
-        initOpacity: .3,
+        initOpacity: .1,
         scale: 1.25,
         child: Scaffold(
-            body: Row(
+            body: Stack(
           children: [
-            Sidebar(size: size),
-            MainContent(size: size),
-            SignInSidebar(size: size)
+            Row(
+              children: [
+                Sidebar(size: size),
+                SingleChildScrollView(child: MainContent(size: size)),
+                SignInSidebar(size: size)
+              ],
+            ),
+            MediaPlayerWidget(size: size)
           ],
         )),
       ),
